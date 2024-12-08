@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data-ref</title>
+    <script type="module" defer src="/static/datastar.js"></script>
+<!--    <link rel="stylesheet" as="style" href="pico.fluid.classless.blue.css">-->
+
+    </head>
+    <body>
+        <div data-signals='{{ data_signals | tojson }}'>
+
+            <form id="form">
+                <fieldset>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required name="name" placeholder="name" minlength="1" maxlength="3" data-bind="obj.name"/>
+                    {% include 'labels.html' %}
+{#                    <div id="labels-container">#}
+{#                    {% for label in data_signals['obj']['labels'] %}#}
+{#                        <input type="checkbox" id="label-{{ label }}" name="{{ label }}" data-bind="obj.labels.{{ label }}"/>#}
+{#                    {% endfor %}#}
+{#                    </div>#}
+                </fieldset>
+                <button type="button" data-on-click="sse('/clear-labels/', {method: 'put'})">Clear labels</button>
+                <button type="button" data-on-click="sse('/set-labels/', {method: 'put'})">Set labels</button>
+            </form>
+
+        </div>
+    </body>
+</html>

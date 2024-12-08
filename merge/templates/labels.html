@@ -1,0 +1,6 @@
+<div id="labels-container">
+{% for label in data_signals['obj']['labels'] %}
+    <label for="label-{{ label }}">{{ label }}</label>
+    <input type="text" id="label-{{ label }}" name="label-{{ label }}" data-bind="obj.labels.{{ label }}"/>
+{% endfor %}
+</div>

@@ -1,0 +1,6 @@
+services:
+  merge:
+    build: .
+    image: datastar-merge-signals-repro
+    ports:
+      - "127.0.0.1:8082:8082"
