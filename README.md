@@ -3,7 +3,7 @@
 Run in this directory:
 
 ```
-docker compose up
+docker compose up --build
 ```
 
 The app is server on `http://127.0.0.1:8082`.
