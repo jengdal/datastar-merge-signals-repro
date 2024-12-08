@@ -8,6 +8,8 @@ docker compose up --build
 
 The app is served on `http://127.0.0.1:8082`.
 
+The version of Datastar I'm using here I built based on the develop branch just a few minutes ago.
+
 # Reproduction steps
 
 This demonstrates how sub signals can be confusing.
