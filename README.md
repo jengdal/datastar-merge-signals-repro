@@ -6,7 +6,7 @@ Run in this directory:
 docker compose up --build
 ```
 
-The app is server on `http://127.0.0.1:8082`.
+The app is served on `http://127.0.0.1:8082`.
 
 # Reproduction steps
 
